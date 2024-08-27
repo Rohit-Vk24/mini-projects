@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="inputs">
+      <div class="content">
+        <h2>BMI Calculator</h2>
+        <p>BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. </p>
+      </div>
+      <div>
+        <form>
+          <label for="height" >Enter your height in cm: <input type="text" id="height"></label><br>
+          <label for="weight" >Enter your weight in kg: <input type="text" id="weight"></label>
+          <button type="button" id="submit">Check Your Result</button>
+        </form>
+      </div>
+    </div>
+    <div class="output">
+      <p id="is">Your BMI <span id="res"></span></p>
+      <p id="classify"></p>
+      
+        <ul class="chart-skills">
+            <li>
+              <span>15-18</span>
+              <span>[Underweight]</span>
+            </li>
+            <li>
+              <span>18-25</span>
+              <span>[Normal]</span>
+            </li>
+            <li>
+              <span>25-30</span>
+              <span>[Overweight]</span>
+            </li>
+            <li>
+              <span>30+</span><br>
+             <li><span>[Obese]</span></li>
+            </li>
+          </ul>
+          <img src="arr2.png" class="arrow" id="bmiArrow" alt="BMI Arrow">
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>

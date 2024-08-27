@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Monomaniac+One&family=Poppins:wght@500;600&display=swap');
+
+body{
+    background-color: rgb(2, 5, 49);
+    font-family: 'Delicious Handrawn', cursive;
+font-family: 'Monomaniac One', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(64, 160, 171);
+    width: 70vw;
+    height: 70vh;
+    border-radius: 20px 20px;
+    border: 3px solid white;
+}
+
+.inputs{
+    width: 50%;
+    height: 100%;
+    background-color: bisque;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.content{
+  text-align: justify;
+  margin: 15px;
+}
+
+.content h2{
+    text-align: center;
+}
+
+.chart-skills {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 30px;
+  }
+  
+  .chart-skills *,
+  .chart-skills::before {
+    box-sizing: border-box;
+  }
+  
+  
+  /* CHART-SKILLS STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .chart-skills {
+    position: relative;
+    width: 350px;
+    height: 175px;
+    overflow: hidden;
+  }
+  
+  .chart-skills::before,
+  .chart-skills::after {
+    position: absolute;
+  }
+  
+  .chart-skills::before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    border: 45px solid rgba(211, 211, 211, .3);
+    border-bottom: none;
+    border-top-left-radius: 175px;
+    border-top-right-radius: 175px;
+  }
+  
+  .chart-skills::after {
+    content: 'Scale';
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(113, 232, 236);
+  }
+  
+  .chart-skills li {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 45px solid;
+    border-top: none;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-timing-function: linear;
+  }
+  
+  .chart-skills li:nth-child(1) {
+    z-index: 4;
+    border-color: rgb(255, 71, 139);
+    animation-name: rotate-one;
+  }
+  
+  .chart-skills li:nth-child(2) {
+    z-index: 3;
+    border-color: rgb(15, 139, 44);
+    animation-name: rotate-two;
+    animation-delay: .4s;
+  }
+  
+  .chart-skills li:nth-child(3) {
+    z-index: 2;
+    border-color: rgb(199, 181, 45);
+    animation-name: rotate-three;
+    animation-delay: .8s;
+  }
+  
+  .chart-skills li:nth-child(4) {
+    z-index: 1;
+    border-color: rgb(255, 17, 0);
+    animation-name: rotate-four;
+    animation-delay: 1.2s;
+  }
+  
+  .chart-skills span {
+    position: absolute;
+    font-size: .85rem;
+    backface-visibility: hidden;
+    animation: fade-in .4s linear forwards;
+  }
+  
+  .chart-skills li:nth-child(1) span {
+    top: 5px;
+    left: 10px;
+    transform: rotate(-21.6deg);
+  }
+  
+  .chart-skills li:nth-child(2) span {
+    top: 38px;
+    left: 17px;
+    transform: rotate(-79.2deg);
+    animation-delay: .4s;
+  }
+  
+  .chart-skills li:nth-child(3) span {
+    top: 40px;
+    left: 20px;
+    transform: rotate(-140.4deg);
+    animation-delay: .8s;
+  }
+  
+  .chart-skills li:nth-child(4) span {
+    top: 22px;
+    left: 10px;
+    transform: rotate(-180deg);
+    animation-delay: 1.2s;
+  }
+  
+  
+  /* ANIMATIONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  @keyframes rotate-one {
+    100% {
+      transform: rotate(21.6deg);
+      /**
+       * 12% => 21.6deg
+       */
+    }
+  }
+  
+  @keyframes rotate-two {
+    0% {
+      transform: rotate(21.6deg);
+    }
+    100% {
+      transform: rotate(79.2deg);
+      /**
+       * 32% => 57.6deg 
+       * 57.6 + 21.6 => 79.2deg
+       */
+    }
+  }
+  
+  @keyframes rotate-three {
+    0% {
+      transform: rotate(79.2deg);
+    }
+    100% {
+      transform: rotate(140.4deg);
+      /**
+       * 34% => 61.2deg 
+       * 61.2 + 79.2 => 140.4deg
+       */
+    }
+  }
+  
+  @keyframes rotate-four {
+    0% {
+      transform: rotate(140.4deg);
+    }
+    100% {
+      transform: rotate(180deg);
+      /**
+       * 22% => 39.6deg  
+       * 140.4 + 39.6 => 180deg
+       */
+    }
+  }
+  
+  @keyframes fade-in {
+    0%,
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .arrow{
+    position: relative;
+    top: 30px;
+    left: 120px;
+    z-index: 1;
+   width: 25vh;
+    transform-origin:75%;
+     transform: rotate(0deg);
+  }
+
+  #is{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+  }
+
+#res{
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+#classify{
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+}
